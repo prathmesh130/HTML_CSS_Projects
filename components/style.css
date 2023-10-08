@@ -126,3 +126,46 @@ body {
     background-color: #3d3d3d;
     font-weight: bold;
 }
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    rotate: 45deg;
+    transition: all 0.2s ease-in-out;
+    animation: heartbeats 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+}
+
+.heart::after {
+    top: -50px
+}
+
+.heart::before {
+    left: -50px;
+}
+
+
+@keyframes heartbeats {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
