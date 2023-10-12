@@ -218,13 +218,14 @@ body {
 }
 .clsbbtn:before{
 content:"";
-    positon:absolute;
+    position:absolute;
     top:100%;left:0;
     width:100%;
     height:100%;
-      background-color: #005599;
+    background-color: #005599;
     transform:translateY(-100%);
     transition:transform 0.3s;
 }
 .clsbtn:hover::before{
         transform:translateY(0%);
+}
